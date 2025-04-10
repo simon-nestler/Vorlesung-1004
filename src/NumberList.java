@@ -19,6 +19,20 @@ public class NumberList {
         }
     }
 
+    public int getFrequency(int value) {
+        int result = 0;
+        NumberNode current = head;
+
+        while (current != null) {
+            if (value == current.getValue()) {
+                result++;
+            }
+            current = current.getNext();
+        }
+
+        return result;
+    }
+
     public String toString() {
         String result = "Die Liste: ";
         NumberNode current = head;

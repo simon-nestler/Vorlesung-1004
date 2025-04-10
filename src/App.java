@@ -8,5 +8,8 @@ public class App {
         list.add(3);
 
         System.out.println(list);
+        System.out.println(list.getFrequency(2));
+        System.out.println(list.getFrequency(1));
+        System.out.println(list.getFrequency(3));
     }
 }
