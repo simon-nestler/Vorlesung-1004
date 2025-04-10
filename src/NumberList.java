@@ -10,6 +10,12 @@ public class NumberList {
 
         if (head == null) {
             head = newNode;
+        } else {
+            NumberNode current = head;
+            while (current.getNext() != null) {
+                current = current.getNext();
+            }
+            current.setNext(newNode);
         }
     }
 
