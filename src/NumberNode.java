@@ -14,4 +14,8 @@ public class NumberNode {
         this.next = next;
     }
 
+    public int getValue() {
+        return value;
+    }
+
 }
