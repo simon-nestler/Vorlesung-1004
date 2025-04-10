@@ -19,6 +19,36 @@ public class NumberList {
         }
     }
 
+    public boolean remove(int index) {
+        int ind = 0;
+
+        if (head == null) {
+            return false;
+        } else {
+            if (index == 0) {
+                head = head.getNext();
+                return true;
+            }
+
+            NumberNode current = head;
+            NumberNode previous = null;
+
+            while (current != null && ind < index) {
+                previous = current;
+                current = current.getNext();
+                ind++;
+                System.out.println("Current: " + current.getValue());
+            }
+
+            if (current != null) {
+                previous.setNext(current.getNext());
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public int getFrequency(int value) {
         int result = 0;
         NumberNode current = head;
